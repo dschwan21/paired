@@ -17,7 +17,7 @@ describe('<RenderHomePage /> test suite', () => {
     const button = getByText(/logout/i);
     userEvent.click(button);
     expect(authService.logout).toHaveBeenCalledTimes(1);
-    expect(getByText(/hi sara welcome to labs basic spa/i).innerHTML).toBe(
+    expect(getByText(/hi sara welcome to Paired!/i).innerHTML).toBe(
       'Hi Sara Welcome to Labs Basic SPA'
     );
   });
