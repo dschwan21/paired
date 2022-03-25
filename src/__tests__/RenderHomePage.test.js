@@ -18,7 +18,7 @@ describe('<RenderHomePage /> test suite', () => {
     userEvent.click(button);
     expect(authService.logout).toHaveBeenCalledTimes(1);
     expect(getByText(/hi sara welcome to Paired!/i).innerHTML).toBe(
-      'Hi Sara Welcome to Labs Basic SPA'
+      'hi sara welcome to Paired!'
     );
   });
 });
