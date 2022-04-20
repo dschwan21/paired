@@ -49,4 +49,27 @@ const getProfileData = authState => {
   }
 };
 
-export { sleep, getExampleData, getProfileData, getDSData };
+const getNflTeams = async () => {
+  const options = {
+    method: 'GET',
+    url: 'https://sportspage-feeds.p.rapidapi.com/teams',
+    params: { league: 'NFL' },
+    headers: {
+      'X-RapidAPI-Host': 'sportspage-feeds.p.rapidapi.com',
+      'X-RapidAPI-Key': 'a27b8d733cmsh1eb0765eb040ab9p1277b0jsn8e01c502e144',
+    },
+  };
+
+  let res = await axios
+    .request(options)
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+  console.log(res);
+  return res;
+};
+
+export { sleep, getExampleData, getProfileData, getDSData, getNflTeams };
