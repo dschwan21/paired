@@ -11,15 +11,11 @@ import RenderProfileListPage from './RenderProfileListPage';
 const ProfileList = () => {
   const { authState } = useOktaAuth();
   console.log('authState', authState);
-  const teams = getNflTeams();
-  console.log('teams', teams);
 
   return (
     //return a list of h2 from each of the data from the api call
     <div>
-      {teams.map(item => (
-        <h2>{item.name}</h2>
-      ))}
+      <h1>Profile List</h1>
     </div>
   );
 };
